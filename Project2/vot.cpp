@@ -1,4 +1,5 @@
 #include "vot.h"
+#include <cmath>
 
 Vot::Vot(){
 	_x = 0;
@@ -7,55 +8,60 @@ Vot::Vot(){
 	_v = 0;
 }
 
-Vot::Vot(int x,int y){
+Vot::Vot(float x,float y){
 	_x = x;
 	_y = y;
 	_z = 0;
 	_v = 0;
 }
 
-Vot::Vot(int x,int y,int z){
+Vot::Vot(float x,float y,float z){
 	_x = x;
 	_y = y;
 	_z = z;
 	_v = 0;
 }
 
-Vot::Vot(int x,int y,int z,int v){
+Vot::Vot(float x,float y,float z,float v){
 	_x = x;
 	_y = y;
 	_z = z;
 	_v = v;
 }
 
-void Vot::set_X(int x){
+void Vot::set_X(float x){
 	_x = x;
 }
 
-void Vot::set_Y(int y){
+void Vot::set_Y(float y){
 	_y = y;
 }
 
-void Vot::set_Z(int z){
+void Vot::set_Z(float z){
 	_z = z;
 }
 
-void Vot::set_V(int v){
+void Vot::set_V(float v){
 	_v = v;
 }
 	
-int Vot::get_X(){
+float Vot::get_X(){
 	return _x;
 }
 	
-int Vot::get_Y(){
+float Vot::get_Y(){
 	return _y;
 }
 	
-int Vot::get_Z(){
+float Vot::get_Z(){
 	return _z;
 }
 	
-int Vot::get_V(){
+float Vot::get_V(){
 	return _v;
+}
+
+void Vot::Dichuyen(){
+	_x += _v * std::cos(_z * 3.14159265f / 180.0f);  
+    _y += _v * std::sin(_z * 3.14159265f / 180.0f);
 }

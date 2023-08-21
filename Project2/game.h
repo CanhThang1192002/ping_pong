@@ -8,13 +8,16 @@ class Game
 private:
 	Ban _ban;
 	Bong _bong;
-	Vot _vot;
+	Vot _vot1;
+	Vot _vot2;
 	int _diem;
-	Vot _bot;
 	int _x;
 public:
 	Game();
-	void Start();
+	void Start_bot();
 	void Vacham();
 	void Bot();
+	void Start_nguoi();
+	void Hainguoi();
+	int game_start();
 };
