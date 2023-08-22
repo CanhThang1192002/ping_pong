@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4ED8729D-2454-4E44-9922-A78B9B640B34}</ProjectGuid>
-    <RootNamespace>Project2</RootNamespace>
+    <ProjectGuid>{1FD4174B-B2F8-4220-87BF-0D576B6FD0FC}</ProjectGuid>
+    <RootNamespace>Ping_Pong</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -65,17 +65,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ban.cpp" />
-    <ClCompile Include="bong.cpp" />
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="vot.cpp" />
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="Double_play.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Paddle.h" />
+    <ClInclude Include="Play.h" />
+    <ClInclude Include="Single_player.h" />
+    <ClInclude Include="Table.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ban.h" />
-    <ClInclude Include="bong.h" />
-    <ClInclude Include="game.h" />
-    <ClInclude Include="vot.h" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="Double_play.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Paddle.cpp" />
+    <ClCompile Include="Play.cpp" />
+    <ClCompile Include="Single_player.cpp" />
+    <ClCompile Include="Table.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
